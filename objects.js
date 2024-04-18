@@ -46,7 +46,10 @@ function getStudentByAverage(students) {
 
 
 //question4
-
+function carNewAge(car){
+  car["age"]=(2024-car.year)
+  console.log(car)
+}
 const car ={
   make: 'Ford',
   model: 'Ranger',
@@ -55,16 +58,8 @@ const car ={
     console.log(`Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`);
   },
 };
+carNewAge(car)
 
-function AgeMethod(car){
-  car.age = function(){
-    const currentYear = new Date().getFullYear();
-    return currentYear-this.year;
-  }
-  return car;
-}
-const updatedCar = AgeMethod(car);
-console.log(updatedCar.age());
 
 
 
